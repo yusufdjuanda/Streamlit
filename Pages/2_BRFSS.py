@@ -10,7 +10,7 @@ from plotly.subplots import make_subplots
 @st.cache()
 def get_display_df():
     display_df = pd.read_csv(
-        "Behavioral_Risk_Factor_Surveillance_System__BRFSS__Prevalence_Data__2011_to_present_.csv",
+        "brfss_original.csv",
         sep=";",
         nrows=20,
     )
@@ -33,7 +33,7 @@ display_df = get_display_df()
 heading = st.container()
 heading.image("BRFSS.png", width=250)
 heading.title("The Behavioral Risk Factor Surveillance System (BRFSS)")
-st.markdown("""---""")
+
 heading.markdown(
     """
 **BRFSS** is the nation’s premier system of health-related telephone surveys that collect state data about U.S. residents regarding their health-related risk behaviors, chronic health conditions, and use of preventive services.
