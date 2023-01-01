@@ -11,7 +11,7 @@ from plotly.subplots import make_subplots
 def get_display_df():
     display_df = pd.read_csv(
         "brfss_original.csv",
-        sep=";",
+        sep=",",
         nrows=20,
     )
     return display_df
